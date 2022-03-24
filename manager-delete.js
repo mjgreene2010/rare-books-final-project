@@ -18,7 +18,7 @@ const getBooks = function () {
         let bookInfo = document.createElement("book-row");
         bookInfo.setAttribute("class", "books");
         bookInfo.setAttribute("id", "book-row");
-        let bookImg = document.createElement("span");
+        let bookId = document.createElement("span");
         let bookTitle = document.createElement("span");
         bookTitle.setAttribute("id", "book-title");
         let bookAuthor = document.createElement("span");
@@ -29,11 +29,11 @@ const getBooks = function () {
         let bookQuantity = document.createElement("span");
         let bookDeleteBtn = document.createElement("span");
         let deleteBtn = document.createElement("button");
-        let bookId = document.createElement("span");
+        // let bookId = document.createElement("span");
         // bookId = item.id;
         bookDeleteBtn.appendChild(deleteBtn);
 
-        bookImg.innerHTML = item.id;
+        bookId.innerHTML = item.id;
         bookTitle.innerHTML = item.title;
         bookAuthor.innerHTML = item.author;
         bookYear.innerHTML = item.year;
@@ -45,7 +45,7 @@ const getBooks = function () {
         bookId.setAttribute("id", "book-id");
         deleteBtn.setAttribute("class", "delete-button");
         deleteBtn.setAttribute("type", "button");
-        bookInfo.appendChild(bookImg);
+        bookInfo.appendChild(bookId);
         bookInfo.appendChild(bookTitle);
         bookInfo.appendChild(bookAuthor);
         bookInfo.appendChild(bookYear);
