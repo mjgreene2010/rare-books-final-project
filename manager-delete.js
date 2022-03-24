@@ -63,7 +63,6 @@ const getBooks = function () {
           let id = item.parentElement.parentElement.firstChild.innerText;
           deleteBooks(id);
           // if (item.parentElement.parentElement === getId.
-          window.Location.href();
         });
       });
     });
