@@ -23,6 +23,10 @@ a:active {
   color: darkgray;
 }
 
+#book-list {
+  visibility: hidden;
+}
+
 nav {
   background-color: rgb(209, 169, 117);
   display: flex;
