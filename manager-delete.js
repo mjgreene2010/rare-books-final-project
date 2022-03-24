@@ -42,7 +42,7 @@ const getBooks = function () {
         bookCost.innerHTML = `$${item.cost}`;
         bookQuantity.innerHTML = item.quantity;
         deleteBtn.innerHTML = "X";
-        bookId.setAttribute("id", "book-id");
+        // bookId.setAttribute("id", "book-id");
         deleteBtn.setAttribute("class", "delete-button");
         deleteBtn.setAttribute("type", "button");
         bookInfo.appendChild(bookImg);
