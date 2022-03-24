@@ -46,5 +46,6 @@ myForm.addEventListener("submit", function (e) {
   cost.value = "";
   quantity.value = "";
 
-  location.href = "/home.html";
+  location.href =
+    "https://mjgreene2010.github.io/rare-books-final-project/home.html";
 });
