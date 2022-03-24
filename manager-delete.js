@@ -30,7 +30,7 @@ const getBooks = function () {
         let bookDeleteBtn = document.createElement("span");
         let deleteBtn = document.createElement("button");
         let bookId = document.createElement("span");
-        bookId = item.id;
+        // bookId = item.id;
         bookDeleteBtn.appendChild(deleteBtn);
 
         bookImg.innerHTML = item.id;
