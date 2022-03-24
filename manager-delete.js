@@ -69,6 +69,7 @@ const getBooks = function () {
 };
 
 const deleteBooks = function (id) {
+  console.log(id);
   fetch(`http://localhost:3000/books/${id}`, {
     method: "DELETE",
   })
