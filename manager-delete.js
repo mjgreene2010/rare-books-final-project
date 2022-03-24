@@ -68,15 +68,13 @@ const getBooks = function () {
     });
 };
 
-console.log(getId);
-
 const deleteBooks = function (id) {
   fetch(`http://localhost:3000/books/${id}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
     .then((data) => console.log(data));
-  window.location.href();
+  // window.location.href();
 };
 
 const bookSearchBtn = () => {
