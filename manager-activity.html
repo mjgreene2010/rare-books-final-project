@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles/style.css" rel="stylesheet"/>
+    <title>Manager</title>
+  </head>
+  <body>
+    <div id="currentUserName"> 
+      <span>johndoe</span>
+    </div>
+    </br>
+    <nav class="navbar">
+      <div class="nav__links">
+        <a class="nav__link" href="/home.html">Home</a>
+        <a class="nav__link" href="/submission.html">New Book</a>
+        <a class="nav__link" href="/manager-activity.html">Manager</a>
+      </div>
+      <span id="autoLogoutTime">15 seconds remaining</span>
+      <button id="signout">Sign Out</button>
+    </nav>
+    </br>
+
+    <div class="manager__container">
+  
+    <div class="side__nav">
+      <div class="side__nav__item">
+        <a href="#">Employee Activity</a>
+      </div>
+      <div class="side__nav__item">
+        <a href="manager-add-emp.html">Add Employee</a>
+      </div>
+      <div class="side__nav__item">
+        <a href="manager-out-of-stock.html">Out-of-stock</a>
+      </div>
+      <div class="side__nav__item">
+        <a href="manager-delete.html"> Delete Book Requests</a>
+      </div>
+    </div>
+  
+    <table id="book__table">
+      <caption>
+        <div id="table__caption">
+          <div id="table__sort"><button>Sort By</button></div>
+          <div id="table__filter"><button>Filter by Genre</button></div>
+            <!-- <div class="dropdown">
+              <button class="dropdown__button">Filter</button>
+              <div class="dropdown__content">
+                <ul>
+                  <li>Fiction</li>
+                  <li>Non-fiction</li>
+                  <li>Sci-Fi</li>
+                  <li>Mystery</li>
+                  <li>Thriller</li>
+                  <li>Romance</li>
+                </ul>
+              </div>
+            </div> -->
+          <div id="table__search"><input id="book-search" placeholder="search"/></div>
+        </div>
+      </caption>
+
+    <tbody>
+      <thead>
+        <th></th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>Genre</th>
+        <th>Condition</th>
+        <th>Quantity</th>
+        <th>Action</th>
+        <th>Date Submitted</th>
+        <th>Submitted By</th>
+      </thead>
+      <tr>
+        <td><img class="book__img" src="./images/lord_jim.png" alt="Lord Jim book picture"></td>
+        <td>Lord Jim</td>
+        <td>Joseph Conrad</td>
+        <td>1900</td>
+        <td>Excellent</td>
+        <td>Non-fiction</td>
+        <td>2</td>
+        <td>01/01/2020</td>
+        <td>01/03/2020</td>
+        <td>johndoe</td>
+      </tr>
+      <tr>
+        <td><img class="book__img" src="./images/lolita.png" alt="Lord Jim book picture"></td>
+        <td>Lolita</td>
+        <td>Vladimir Nabokov</td>
+        <td>1955</td>
+        <td>Good</td>
+        <td>Fiction</td>
+        <td>1</td>
+        <td>02/23/2020</td>
+        <td>01/25/2020</td>
+        <td>janedoe</td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+  </body>
+</html>

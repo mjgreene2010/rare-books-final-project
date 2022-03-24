@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles/manager-delete.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer>
+    <script defer src="manager-delete.js"></script>
+    <title>Manager</title>
+  </head>
+  <body>
+    <div id="currentUserName"> 
+      <span>johndoe</span>
+    </div>
+    </br>
+    <nav class="navbar">
+      <div class="nav__links">
+        <a class="nav__link" href="/home.html">Home</a>
+        <a class="nav__link" href="/submission.html">New Book</a>
+        <a class="nav__link" href="/manager-activity.html">Manager</a>
+      </div>
+      <span id="autoLogoutTime">15 seconds remaining</span>
+      <button id="signout">Sign Out</button>
+    </nav>
+    </br>
+
+    <div class="manager-container">
+  
+    
+      <div class="side__nav">
+        <div class="side__nav__item">
+          <a href="manager-activity.html">Employee Activity</a>
+        </div>
+        <div class="side__nav__item">
+          <a href="manager-add-emp.html">Add Employee</a>
+        </div>
+        <div class="side__nav__item">
+          <a href="manager-out-of-stock.html">Out-of-stock</a>
+        </div>
+        <div class="side__nav__item">
+          <a href="#"> Delete Book Requests</a>
+        </div>
+      </div>
+  
+      <div class="book-list-container">
+        <div id="book-list">
+          <div class="books" id="book-list-heading">
+            <span></span>
+            <span class="fa fa-sort sort-button" id="sort-buttons"> Title</span>
+            <span class="fa fa-sort sort-button" id="sort-buttons"> Author</span>
+            <span class="fa fa-sort sort-button" id="sort-buttons"> Year</span>
+            <span class="fa fa-sort sort-button" id="sort-buttons"> Genre</span>
+            <span class="fa fa-sort sort-button" id="sort-buttons"> Condition</span>
+            <span class="fa fa-sort sort-button" id="sort-buttons"> Cost </span>
+            <span class="fa fa-sort sort-button" id="sort-buttons"> Quantity</span>
+            <span class="search" value="false"><button class="fa fa-search" id="book-search"></button></span>
+          </div>
+          <div id="book-listings">
+            
+          </div>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

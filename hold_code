@@ -1,0 +1,45 @@
+<!--<span class="filter" value="false"><button class="fa fa-filter" id="book-filter"></button></span> -->
+<!-- <div class="books" id="book-list-heading">
+  <span></span>
+  <span class="fa fa-sort sort-button"> Title</span>
+  <span class="fa fa-sort sort-button"> Author</span>
+  <span class="fa fa-sort sort-button"> Year</span>
+  <span class="fa fa-sort sort-button"> Genre</span>
+  <span class="fa fa-sort sort-button"> Condition</span>
+  <span class="fa fa-sort sort-button"> Cost </span>
+  <span class="fa fa-sort sort-button"> Quantity</span>
+  <span class="search" value="false"><button class="fa fa-search" id="book-search"></button></span>
+</div>
+<div class="books" id="book-1">
+  <span class=><img class="book-img" src="" alt="Lolita"></span>
+  <span>I Know Why The Cage Bird Sings</span>
+  <span>Maya Angelou</span>
+  <span>1969</span>
+  <span>Non-Fiction</span>
+  <span>Excellent</span>
+  <span>$980</span>
+  <span>1</span>
+  <span><button class="update-button">Update</button><button class="delete-button">X</button></span>
+</div>
+<div class="books" id="book-1">
+  <span><img class="book-img" src="" alt="Lord"></span>
+  <span>Lord Jim</span>
+  <span>Joseph Conrad</span>
+  <span>1900</span>
+  <span>Non-fiction</span>
+  <span>Excellent</span>
+  <span>$800</span>
+  <span>2</span>
+  <span><button class="update-button">Update</button><button class="delete-button">X</button></span>
+</div>
+<div class="books" id="book-1">
+  <span><img class="book-img" src="" alt="Lolita"></span>
+  <span>Lolita</span>
+  <span>Vladimir Nabokov</span>
+  <span>1955</span>
+  <span>Fiction</span>
+  <span>Good</span>
+  <span>$390</span>
+  <span>1</span>
+  <span><button class="update-button">Update</button><button class="delete-button">X</button></span>
+</div> -->
