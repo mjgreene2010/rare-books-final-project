@@ -24,7 +24,7 @@ a:active {
 }
 
 #book-id {
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 nav {
