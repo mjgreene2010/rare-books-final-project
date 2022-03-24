@@ -18,7 +18,7 @@ const getBooks = function () {
         let bookInfo = document.createElement("book-row");
         bookInfo.setAttribute("class", "books");
         bookInfo.setAttribute("id", "book-row");
-        // let bookImg = document.createElement("span");
+        let bookImg = document.createElement("span");
         let bookTitle = document.createElement("span");
         bookTitle.setAttribute("id", "book-title");
         let bookAuthor = document.createElement("span");
@@ -33,7 +33,7 @@ const getBooks = function () {
         // bookId = item.id;
         bookDeleteBtn.appendChild(deleteBtn);
 
-        bookId.innerHTML = item.id;
+        bookImg.innerHTML = item.id;
         bookTitle.innerHTML = item.title;
         bookAuthor.innerHTML = item.author;
         bookYear.innerHTML = item.year;
@@ -42,7 +42,7 @@ const getBooks = function () {
         bookCost.innerHTML = `$${item.cost}`;
         bookQuantity.innerHTML = item.quantity;
         deleteBtn.innerHTML = "X";
-        // bookId.setAttribute("id", "book-id");
+        bookId.setAttribute("id", "book-id");
         deleteBtn.setAttribute("class", "delete-button");
         deleteBtn.setAttribute("type", "button");
         bookInfo.appendChild(bookImg);
