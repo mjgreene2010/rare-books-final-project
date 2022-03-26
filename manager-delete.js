@@ -29,8 +29,6 @@ const getBooks = function () {
         let bookQuantity = document.createElement("span");
         let bookDeleteBtn = document.createElement("span");
         let deleteBtn = document.createElement("button");
-        // let bookId = document.createElement("span");
-        // bookId = item.id;
         bookDeleteBtn.appendChild(deleteBtn);
 
         bookId.innerHTML = item.id;
