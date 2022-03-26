@@ -23,20 +23,23 @@ myForm.addEventListener("submit", function (e) {
     quantity: `${quantity.value}`,
   };
 
-  fetch(`http://localhost:3000/books`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data);
+  try {
+    fetch(`http://localhost:3000/books`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     })
-    .catch((error) => {
-      console.error("Error: error");
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      });
+  } catch (error) {
+    console.error("Error: error");
+  } finally {
+    window.location.href = "/home.html";
+  }
 
   title.value = "";
   author.value = "";
@@ -45,7 +48,4 @@ myForm.addEventListener("submit", function (e) {
   condition.value = "";
   cost.value = "";
   quantity.value = "";
-
-  location.href =
-    "https://mjgreene2010.github.io/rare-books-final-project/home.html";
 });

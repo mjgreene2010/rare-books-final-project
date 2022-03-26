@@ -49,16 +49,6 @@
       "condition": "Excellent",
       "cost": 800,
       "quantity": 2
-    },
-    {
-      "id": 3,
-      "title": "Lolita",
-      "author": "Vladimir Nobokov",
-      "year": 1955,
-      "genre": "Fiction",
-      "condition": "Good",
-      "cost": 390,
-      "quantity": 1
     }
   ]
 }

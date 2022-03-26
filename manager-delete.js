@@ -59,8 +59,9 @@ const getBooks = function () {
         someData = document.querySelectorAll(".delete-button");
       });
       someData.forEach((item) => {
-        item.addEventListener("click", function (e) {
-          let id = item.parentElement.parentElement.firstChild.innerText;
+        item.addEventListener("click", function () {
+          let id = item.parentElement.parentElement.firstChild.innerHTML;
+          console.log(id);
           deleteBooks(id);
           // if (item.parentElement.parentElement === getId.
         });
