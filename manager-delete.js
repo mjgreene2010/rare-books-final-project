@@ -70,13 +70,17 @@ const getBooks = function () {
 };
 
 const deleteBooks = function (id) {
-  console.log(id);
-  fetch(`http://localhost:3000/books/${id}`, {
-    method: "DELETE",
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-  // window.location.href();
+  try {
+    fetch(`http://localhost:3000/books/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  } catch (e) {
+    console.log(e.message);
+  } finally {
+    window.location.href();
+  }
 };
 
 const bookSearchBtn = () => {
