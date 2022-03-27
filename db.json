@@ -51,14 +51,14 @@
       "quantity": 2
     },
     {
-      "title": "asdfdf",
+      "id": 3,
+      "title": "A New Title",
       "author": "33",
       "year": "561",
       "genre": "ef",
-      "condition": "fgr",
+      "condition": "Excellent",
       "cost": "56",
-      "quantity": "1",
-      "id": 3
+      "quantity": "2"
     }
   ]
 }

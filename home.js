@@ -9,55 +9,73 @@ const sortBtn = document.querySelector(".sort-button");
 let someData;
 let getId;
 
-// const renderForm = function (data) {
-let formHtml = `<div id="submission__container">
-  <form id="submission__form">
-    <span id="submission__field">
-      <label for="id">Id:</label>
-      <input type="number" id="id" value="" name="id" disabled/>
-    </span>
+const renderForm = function (data, container) {
+  // console.log(data[1].innerText);
+  let html = `<div id="submission__container">
+    <form id="submission__form">
+      <span id="submission__field">
+        <label for="id">Id:</label>
+        <input type="number" id="id" value="${
+          data[0].innerText
+        }"  name="id" disabled/>
+      </span>
+      </br></br>
+      <span id="submission__field">
+        <label for="title">Title:</label>
+        <input type="text" id="title" value="${
+          data[1].innerText
+        }"  name="title"/>
+      </span>
+      </br></br>
+      <span id="submission__field">
+        <label for="author">Author:</label>
+        <input type="text" id="author" value="${
+          data[2].innerText
+        }" name="author">
+      </span>
+      </br></br>
+      <span id="submission__field">
+        <label for="year">Year:</label>
+        <input type="number" id="year" value="${
+          data[3].innerText
+        }" name="year"/>
+      </span>
+      </br></br>
+      <span id="submission__field">
+        <label for="genre">Genre:</label>
+        <input type="text" id="genre" placeholder="dropdown" value="${
+          data[4].innerText
+        }" name="genre"/>
+      </span>
+      </br></br>
+      <span id="submission__field">
+        <label for="condition">Condition:</label>
+        <input type="text" id="condition" placeholder="dropdown" value="${
+          data[5].innerText
+        }" name="condition"/>
+      </span>
+      </br></br>
+      <span id="submission__field">
+        <label for="cost">Cost:</label>
+        <input type="number" id="cost" value=${parseInt(
+          data[6].innerText.replace("$", "")
+        )} name="cost"/>
+      </span>
     </br></br>
-    <span id="submission__field">
-      <label for="title">Title:</label>
-      <input type="text" id="title" value="" name="title"/>
-    </span>
-    </br></br>
-    <span id="submission__field">
-      <label for="author">Author:</label>
-      <input type="text" id="author" value="" name="author">
-    </span>
-    </br></br>
-    <span id="submission__field">
-      <label for="year">Year:</label>
-      <input type="number" id="year" value="" name="year"/>
-    </span>
-    </br></br>
-    <span id="submission__field">
-      <label for="genre">Genre:</label>
-      <input type="text" id="genre" placeholder="dropdown" value="" name="genre"/>
-    </span>
-    </br></br>
-    <span id="submission__field">
-      <label for="condition">Condition:</label>
-      <input type="text" id="condition" placeholder="dropdown" value="" name="condition"/>
-    </span>
-    </br></br>
-    <span id="submission__field">
-      <label for="cost">Cost:</label>
-      <input type="number" id="cost" value="" name="cost"/>
-    </span>
-  </br></br>
-    <span id="submission__field">
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" value="" name="quantity"/>
-    </span>
-    </br></br>
-    <span>
-      <label></label><button type="submit">Submit</button>
-    </span>
-  </form>
-</div>`;
-// };
+      <span id="submission__field">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="${
+          data[7].innerText
+        }" name="quantity"/>
+      </span>
+      </br></br>
+      <span>
+        <label></label><button id="update-button" type="submit">Submit</button>
+      </span>
+    </form>
+  </div>`;
+  container.insertAdjacentHTML("beforeend", html);
+};
 
 const getBooks = function () {
   fetch(`http://localhost:3000/books`)
@@ -71,14 +89,24 @@ const getBooks = function () {
         let bookId = document.createElement("span");
         let bookTitle = document.createElement("span");
         let bookAuthor = document.createElement("span");
-        bookTitle.setAttribute("id", "book-title");
+
         let bookYear = document.createElement("span");
         let bookGenre = document.createElement("span");
         let bookCondition = document.createElement("span");
         let bookCost = document.createElement("span");
         let bookQuantity = document.createElement("span");
         let bookUpdateBtn = document.createElement("span");
+        bookId.setAttribute("id", "book-id");
+        bookTitle.setAttribute("id", "book-title");
+        bookAuthor.setAttribute("id", "book-author");
+        bookYear.setAttribute("id", "book-year");
+        bookGenre.setAttribute("id", "book-genre");
+        bookCondition.setAttribute("id", "book-condition");
+        bookCost.setAttribute("id", "book-cost");
+        bookQuantity.setAttribute("id", "book-quantity");
         let updateBtn = document.createElement("button");
+        updateBtn.setAttribute("class", "update-button");
+        updateBtn.setAttribute("type", "button");
         bookUpdateBtn.appendChild(updateBtn);
 
         bookId.innerHTML = item.id;
@@ -90,9 +118,7 @@ const getBooks = function () {
         bookCost.innerHTML = `$${item.cost}`;
         bookQuantity.innerHTML = item.quantity;
         updateBtn.innerHTML = "Update";
-        bookId.setAttribute("id", "book-id");
-        updateBtn.setAttribute("class", "update-button");
-        updateBtn.setAttribute("type", "button");
+
         bookInfo.appendChild(bookId);
         bookInfo.appendChild(bookTitle);
         bookInfo.appendChild(bookAuthor);
@@ -115,7 +141,8 @@ const getBooks = function () {
     });
 
   const updatingBook = (book) => {
-    console.log(book);
+    // console.log(book.children);
+
     let myModal = document.createElement("div");
     myModal.setAttribute("class", "modal");
     myModal.setAttribute("id", "myModal");
@@ -126,9 +153,19 @@ const getBooks = function () {
     let closeModal = document.createElement("span");
     closeModal.classList.add("close");
     closeModal.innerHTML = "&times;";
-    myModal.insertAdjacentHTML("beforeend", formHtml);
+    renderForm(book.children, myModal);
     myModal.appendChild(closeModal);
     bookListing.appendChild(myModal);
+
+    let updatedId = document.getElementById("id");
+    let updatedTitle = document.getElementById("title");
+    let updatedAuthor = document.getElementById("author");
+    let updatedYear = document.getElementById("year");
+    let updatedGenre = document.getElementById("genre");
+    let updatedCondition = document.getElementById("condition");
+    let updatedCost = document.getElementById("cost");
+    let updatedQuantity = document.getElementById("quantity");
+    let updateBtn = document.getElementById("update-button");
 
     // // Get the modal
     var modal = document.getElementById("myModal");
@@ -147,8 +184,44 @@ const getBooks = function () {
         modal.style.display = "none";
       }
     };
+
+    updateBtn.addEventListener("click", (e) => {
+      const formData = {
+        id: `${updatedId.value}`,
+        title: `${updatedTitle.value}`,
+        author: `${updatedAuthor.value}`,
+        year: `${updatedYear.value}`,
+        genre: `${updatedGenre.value}`,
+        condition: `${updatedCondition.value}`,
+        cost: `${updatedCost.value}`,
+        quantity: `${updatedQuantity.value}`,
+      };
+      e.preventDefault();
+      submitUpdatedBook(updatedId, formData);
+    });
   };
 };
+
+function submitUpdatedBook(updatedId, formData) {
+  console.log(updatedId);
+  console.log(formData);
+
+  try {
+    fetch(`http://localhost:3000/books/${updatedId.value}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      });
+  } catch (error) {
+    console.error("Error: error");
+  }
+}
 
 const bookSearchBtn = () => {
   let inputValue = document.getElementById("book-search-input").value;
