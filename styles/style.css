@@ -142,9 +142,9 @@ nav .nav__links {
   flex: 1;
 }
 
-nav #signout {
-  /* padding: 3px; */
-}
+/* nav #signout {
+  padding: 3px;
+} */
 
 table {
   /* margin: auto; */

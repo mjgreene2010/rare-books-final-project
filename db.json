@@ -4,6 +4,8 @@
       "id": 1,
       "first_name": "Steve",
       "last_name": "Smith",
+      "username": "ssmith",
+      "password": "admin123",
       "store_number": 302,
       "isManager": true
     },
@@ -11,6 +13,8 @@
       "id": 2,
       "first_name": "Mike",
       "last_name": "Williams",
+      "username": "mwilliams",
+      "password": "emp123",
       "storeNumber": 302,
       "isManager": false
     },
@@ -18,12 +22,16 @@
       "id": 3,
       "first_name": "Lesile",
       "last_name": "Hill",
+      "username": "lhill",
+      "passowrd": "emp123",
       "storeNumber": 302,
       "isManager": false
     },
     {
       "first_name": "Ellen",
       "last_name": "Henderson",
+      "username": "ehenderson",
+      "password": "admin123",
       "storeNumber": 302,
       "isManager": true,
       "id": 4
