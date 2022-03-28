@@ -6,8 +6,20 @@ const bookFilter = document.getElementById("book-filter");
 const heading = document.querySelector("#book-list-heading");
 const filterBtn = document.querySelector(".submit-filter");
 const sortBtn = document.querySelector(".sort-button");
+const currentUser = document.getElementById("current-username");
+const signout = document.getElementById("signout");
 let someData;
 let getId;
+
+let userString = localStorage.getItem("user");
+let userObject = JSON.parse(userString);
+
+currentUser.innerHTML = `${userObject.first_name}, you are logged in!`;
+
+signout.addEventListener("click", function () {
+  localStorage.clear();
+  window.location.href = "./index.html";
+});
 
 const renderForm = function (data, container) {
   // console.log(data[1].innerText);

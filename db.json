@@ -6,6 +6,7 @@
       "last_name": "Smith",
       "username": "ssmith",
       "password": "admin123",
+      "email": "ssmith@rarebook.com",
       "store_number": 302,
       "isManager": true
     },
@@ -15,6 +16,7 @@
       "last_name": "Williams",
       "username": "mwilliams",
       "password": "emp123",
+      "email": "mwilliams@rarebook.com",
       "storeNumber": 302,
       "isManager": false
     },
@@ -24,17 +26,19 @@
       "last_name": "Hill",
       "username": "lhill",
       "passowrd": "emp123",
+      "email": "lhill@rarebook.com",
       "storeNumber": 302,
       "isManager": false
     },
     {
+      "id": 4,
       "first_name": "Ellen",
       "last_name": "Henderson",
       "username": "ehenderson",
       "password": "admin123",
+      "email": "ehenderson@rarebook.com",
       "storeNumber": 302,
-      "isManager": true,
-      "id": 4
+      "isManager": true
     }
   ],
   "books": [

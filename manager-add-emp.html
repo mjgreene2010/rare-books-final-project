@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/style.css" rel="stylesheet"/>
+    <script defer src="./manager-add-emp.js"></script>
     <title>Manager</title>
   </head>
   <body>
@@ -44,50 +45,55 @@
         <form  id="employee-edit-form" >
           <span class="edit-emp-field" id="edit-username">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" />
+            <input type="text" id="username" name="username" value="" />
           </span>
           </br></br>
           <span class="edit-emp-field" id="edit-temp-password">
-            <label for="temp_password">Temp Password:</label>
-            <input type="password" id="temp_password" name="temp_password"/>
+            <label for="temp-password">Temp Password:</label>
+            <input type="password" id="temp-password" name="temp-password"/>
           </span>
           </br></br>
           <span class="edit-emp-field" id="edit-confirm-temp-password">
-            <label for="confirm_temp_password">Confirm Password:</label>
-            <input type="password" id="confirm_temp_password" name="confirm_temp_password"/>
+            <label for="confirm-temp-password">Confirm Password:</label>
+            <input type="password" id="confirm-temp-password" name="confirm-temp-password"/>
           </span>
           </br></br>
           <span class="edit-emp-field" id="edit-email">
-            <label for="employee_email">Email:</label>
-            <input type="text" id="employee_email" name="employee_email"/>
+            <label for="employee-email">Email:</label>
+            <input type="email" id="employee-email" name="employee-email"/>
           </span>
           </br></br>
           <span class="edit-emp-field" id="edit-first-name">
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name"/>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name"/>
           </span>  
           </br></br>
           <span class="edit-emp-field" id="edit-last-name">
-            <label for="last_name">Last Name:</label>
-            <input type="text"  id="last_name" name="last_name"/>
+            <label for="last-name">Last Name:</label>
+            <input type="text"  id="last-name" name="last-name"/>
           </span>
         </br></br>
+        <span class="edit-emp-field" id="edit-store-number">
+          <label for="store-number">Store Number:</labl>
+          <input type="number"  id="store-number" name="store-number"/>
+        </span>
+      </br></br>
           <span class="edit-emp-field" id="is_manager">
             <span >Manager:</span>
             <label for="manager-yes">Yes</label>
-            <input type="radio"  id="manager-yes" name="manager-yes" value="Yes"/>
+            <input type="radio"  id="manager-yes" name="manager" value=true />
             <label for="manager-no">No</label>
-            <input type="radio"  id="manager-no" name="manager-no" value="No"/>
+            <input type="radio"  id="manager-no" name="manager" value=false />
           </span>
         </br></br>
           <span class="edit-emp-field" id="delete-employee">
             <span>Delete:</span>
             <label for="delete-emp-yes">Yes</label>
-            <input type="radio"  id="delete-emp-yes" name="delete-emp-yes" value="Yes"/>
+            <input type="radio"  id="delete-emp-yes" name="delete-emp" value="true"/>
             </span>
           <span>
             <label for="delete-emp-no">No</label>
-            <input type="radio"  id="delete-emp-no" name="delete-emp-no" value="No"/>
+            <input type="radio"  id="delete-emp-no" name="delete-emp" value="false"/>
           </span>
           </br></br>
           <button id="submit-employee" type="submit">Submit</button>
