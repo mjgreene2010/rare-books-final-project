@@ -119,7 +119,7 @@ const renderForm = function (data, container) {
 };
 
 const getBooks = function () {
-  fetch(`http://localhost:3000/books`)
+  fetch(`https://rare-books-final-project-api.herokuapp.com/books`)
     .then((response) => response.json())
     .then((data) => {
       data.forEach((item) => {
@@ -231,11 +231,11 @@ const getBooks = function () {
         id: `${updatedId.value}`,
         title: `${updatedTitle.value}`,
         author: `${updatedAuthor.value}`,
-        year: `${updatedYear.value}`,
+        year: parseInt(`${updatedYear.value}`),
         genre: `${updatedGenre.value}`,
         condition: `${updatedCondition.value}`,
-        cost: `${updatedCost.value}`,
-        quantity: `${updatedQuantity.value}`,
+        cost: parseInt(`${updatedCost.value}`),
+        quantity: parseInt(`${updatedQuantity.value}`),
       };
       e.preventDefault();
       submitUpdatedBook(updatedId, formData);
@@ -248,13 +248,16 @@ function submitUpdatedBook(updatedId, formData) {
   console.log(formData);
 
   try {
-    fetch(`http://localhost:3000/books/${updatedId.value}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
+    fetch(
+      `https://rare-books-final-project-api.herokuapp.com/books/${updatedId.value}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
