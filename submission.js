@@ -79,7 +79,7 @@ myForm.addEventListener("submit", function (e) {
   } catch (error) {
     console.error("Error: error");
   } finally {
-    window.location.href = "home.html";
+    window.location.href = "./home.html";
   }
 
   title.value = "";
