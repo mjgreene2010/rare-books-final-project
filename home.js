@@ -240,6 +240,7 @@ const getBooks = function () {
       e.preventDefault();
       submitUpdatedBook(updatedId, formData);
     });
+    window.location.href();
   };
 };
 
@@ -265,7 +266,6 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   } finally {
-    window.location.href = "home.html";
   }
 }
 
