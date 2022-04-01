@@ -31,7 +31,7 @@ let getUsers = () => {
           password.value === user.password
         ) {
           localStorage.setItem("user", JSON.stringify(user));
-          window.location.href(`/home.html`);
+          window.location.href = "/home.html";
           return `${user.first_name}, you are logged in`;
         }
       });
