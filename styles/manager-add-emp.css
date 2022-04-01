@@ -37,7 +37,7 @@ nav .nav__link {
 
 body {
   margin: 2% 5% 2% 5%;
-  background-image: url("/images/vintage-books.jpg");
+  background-image: url("images/vintage-books.jpg");
   color: white;
 }
 
