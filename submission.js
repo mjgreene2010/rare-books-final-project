@@ -65,7 +65,7 @@ myForm.addEventListener("submit", function (e) {
   };
 
   try {
-    fetch(`http://localhost:3000/books`, {
+    fetch(`https://rare-books-final-project-api.herokuapp.com/books`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

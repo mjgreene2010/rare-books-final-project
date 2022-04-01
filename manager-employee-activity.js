@@ -23,7 +23,7 @@ if (userObject.isManager === false) managerLink.style.display = "none";
 
 signout.addEventListener("click", function () {
   localStorage.clear();
-  window.location.href = "./index.html";
+  window.location.href = "index.html";
 });
 
 let timer = 60;
@@ -51,7 +51,7 @@ function resetTimer() {
 }
 
 const getBooks = function () {
-  fetch(`http://localhost:3000/books`)
+  fetch(`https://rare-books-final-project-api.herokuapp.com/books`)
     .then((response) => response.json())
     .then((data) => (getId = data))
     .then((data) => {
@@ -113,7 +113,7 @@ const inputValue = (e) => {
 const getSearchBooks = function () {
   let inputValue = document.getElementById("book-search-input").value;
 
-  fetch(`http://localhost:3000/books`)
+  fetch(`https://rare-books-final-project-api.herokuapp.com/books`)
     .then((response) => response.json())
     .then((data) =>
       data.filter((item) => {
@@ -199,7 +199,7 @@ const toggleSearch = () => {
 bookSearch.addEventListener("click", toggleSearch);
 
 const sortBooks = (criteria) => {
-  fetch(`http://localhost:3000/books`)
+  fetch(`https://rare-books-final-project-api.herokuapp.com/books`)
     .then((response) => response.json())
     .then((data) =>
       data.sort((a, b) => {

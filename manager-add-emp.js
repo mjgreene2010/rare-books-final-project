@@ -21,7 +21,7 @@ if (userObject.isManager === false) managerLink.style.display = "none";
 
 signout.addEventListener("click", function () {
   localStorage.clear();
-  window.location.href = "./index.html";
+  window.location.href = "index.html";
 });
 
 let timer = 60;
@@ -56,7 +56,7 @@ submitForm.addEventListener("click", function (e) {
   });
 
   try {
-    fetch(`http://localhost:3000/users`, {
+    fetch(`https://rare-books-final-project-api.herokuapp.com/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

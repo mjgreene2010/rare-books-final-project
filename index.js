@@ -14,7 +14,7 @@ const login_error = document.querySelector("#login-error");
 // });
 
 let getUsers = () => {
-  fetch(`http://localhost:3000/users`)
+  fetch(`https://rare-books-final-project-api.herokuapp.com/users`)
     .then((response) => response.json())
     .then((users) => {
       if (username.value === "") return alert("please enter username");
