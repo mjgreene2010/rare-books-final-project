@@ -265,6 +265,7 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   } finally {
+    debugger;
     window.location.reload();
   }
 }
