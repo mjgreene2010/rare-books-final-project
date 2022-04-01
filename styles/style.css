@@ -8,8 +8,13 @@
 /* SELECTOR: Body */
 
 body {
-  background-color: whitesmoke;
-  margin: 1% 5% 5% 5%;
+  margin: 2% 5% 2% 5%;
+  background-image: url("/images/vintage-books.jpg");
+  color: white;
+}
+
+form {
+  color: black;
 }
 
 /* SELECTORS: by Class */
@@ -49,6 +54,10 @@ body {
 }
 /* SELECTORS: by ID */
 
+#login-error {
+  color: red;
+}
+
 #book__table {
   min-width: 70%;
 }
@@ -61,14 +70,25 @@ body {
   flex: 1;
 }
 
-#login-container,
 #edit__employee__container,
 #submission__container {
   display: flex;
   justify-content: center;
 }
 
-#login-form,
+#login-container {
+  display: flex;
+  justify-content: center;
+}
+
+#login-form {
+  background-color: blanchedalmond;
+  text-align: center;
+  border-radius: 10px;
+  background-size: 20%;
+  padding: 6%;
+}
+
 #employee-edit-form,
 #submission__form {
   background-color: blanchedalmond;

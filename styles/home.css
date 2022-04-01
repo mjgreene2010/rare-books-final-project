@@ -1,10 +1,32 @@
 * {
   margin: 0;
   padding: 0;
+  /* background-repeat: no-repeat; */
 }
 
 body {
   margin: 2% 5% 2% 5%;
+  background-image: url("/images/vintage-books.jpg");
+  color: white;
+}
+
+#title-row {
+  display: flex;
+  -ms-flex-align: center;
+}
+
+#current-username-container {
+  flex: 1;
+}
+
+#current-username {
+  padding-top: 50%;
+}
+
+#website-title {
+  /* float: right; */
+  font-size: 350%;
+  font-family: Brush Script MT;
 }
 
 /* NAVIGATION */
@@ -30,11 +52,11 @@ nav {
   border-radius: 5px;
 }
 
-nav .nav-links {
+nav .nav__links {
   flex: 1;
 }
 
-nav .nav-link {
+nav .nav__link {
   padding-right: 3%;
 }
 
@@ -46,6 +68,7 @@ nav .nav-link {
 
 .book-list-container {
   padding: 0 5% 0 5%;
+  position: sticky;
 }
 
 .books {
@@ -61,6 +84,8 @@ nav .nav-link {
 #book-search {
   border: none;
   text-decoration: none;
+  background-color: transparent;
+  color: white;
 }
 
 .book-filter-input,
@@ -71,7 +96,8 @@ nav .nav-link {
 
 #book-list-heading {
   background-color: rgba(255, 255, 255, 0);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
   position: static;
 }
 
@@ -102,7 +128,6 @@ nav .nav-link {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -110,8 +135,8 @@ nav .nav-link {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  /* background-color: rgb(0, 0, 0); Fallback color */
-  /* background-color: rgba(0, 0, 0, 0.4); Black w/ opacity */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */

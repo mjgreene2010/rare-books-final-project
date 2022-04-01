@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/manager-delete.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer/>
     <script defer src="manager-delete.js"></script>
     <title>Manager</title>
   </head>
   <body>
-    <div id="currentUserName"> 
-      <span>johndoe</span>
-    </div>
-    </br>
+    <div id = "title-row">
+      <div id="current-username-container"> 
+        <span id="current-username"></span>
+      </div>
+    <div id="website-title">Rare & Unique Books</div>
+  </div>
+  </br>
+    
     <nav class="navbar">
       <div class="nav__links">
         <a class="nav__link" href="/home.html">Home</a>
         <a class="nav__link" href="/submission.html">New Book</a>
-        <a class="nav__link" href="/manager-activity.html">Manager</a>
+        <a class="nav__link" id="manager-link" href="/manager-employee-activity.html">Manager</a>
       </div>
-      <span id="autoLogoutTime">15 seconds remaining</span>
+      <span id="auto-logout-time"></span>
       <button id="signout">Sign Out</button>
     </nav>
     </br>
@@ -30,7 +34,7 @@
     
       <div class="side__nav">
         <div class="side__nav__item">
-          <a href="manager-activity.html">Employee Activity</a>
+          <a href="manager-employee-activity.html">Employee Activity</a>
         </div>
         <div class="side__nav__item">
           <a href="manager-add-emp.html">Add Employee</a>

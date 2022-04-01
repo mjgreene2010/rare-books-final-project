@@ -46,11 +46,11 @@
       "id": 1,
       "title": "I Know Why The Cage Bird Sings",
       "author": "Maya Angelou",
-      "year": 1969,
+      "year": "1969",
       "genre": "Non-fiction",
       "condition": "Excellent",
-      "cost": 980,
-      "quantity": 1
+      "cost": "1000",
+      "quantity": "2"
     },
     {
       "id": 2,
@@ -65,12 +65,12 @@
     {
       "id": 3,
       "title": "A New Title",
-      "author": "33",
+      "author": "Mr. Guy",
       "year": "561",
       "genre": "ef",
       "condition": "Excellent",
       "cost": "56",
-      "quantity": "2"
+      "quantity": "1"
     }
   ]
 }

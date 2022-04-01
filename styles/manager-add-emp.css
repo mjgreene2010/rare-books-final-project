@@ -1,0 +1,61 @@
+.side__nav {
+  background-color: rgb(209, 169, 117);
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  margin: 0 3% 0 0;
+  border-radius: 5px;
+  max-height: fit-content;
+  /* flex: 1; */
+  height: 12%;
+  width: 12%;
+}
+
+.side__nav__item {
+  /* display: flex; */
+  /* max-width: fit-content; */
+  padding: 16% 16% 16% 16%;
+}
+
+nav {
+  background-color: rgb(209, 169, 117);
+  display: flex;
+  padding: 1.5%;
+  margin-bottom: 1.5%;
+  border-radius: 5px;
+}
+
+nav .nav__links {
+  flex: 1;
+}
+
+nav .nav__link {
+  padding-right: 3%;
+}
+
+#signout {
+  margin-left: 2%;
+}
+
+body {
+  margin: 2% 5% 2% 5%;
+  background-image: url("/images/vintage-books.jpg");
+  color: white;
+}
+
+#title-row {
+  display: flex;
+  -ms-flex-align: center;
+}
+
+#current-username-container {
+  flex: 1;
+}
+
+#current-username {
+  padding-top: 50%;
+}
+
+#website-title {
+  /* float: right; */
+  font-size: 350%;
+  font-family: Brush Script MT;
+}

@@ -68,9 +68,7 @@ const getBooks = function () {
         let bookCondition = document.createElement("span");
         let bookCost = document.createElement("span");
         let bookQuantity = document.createElement("span");
-        let bookDeleteBtn = document.createElement("span");
-        let deleteBtn = document.createElement("button");
-        bookDeleteBtn.appendChild(deleteBtn);
+        let emptySpace = document.createElement("span");
 
         bookId.innerHTML = item.id;
         bookTitle.innerHTML = item.title;
@@ -80,10 +78,9 @@ const getBooks = function () {
         bookCondition.innerHTML = item.condition;
         bookCost.innerHTML = `$${item.cost}`;
         bookQuantity.innerHTML = item.quantity;
-        deleteBtn.innerHTML = "X";
+        emptySpace.innerHTML = "";
         bookId.setAttribute("id", "book-id");
-        deleteBtn.setAttribute("class", "delete-button");
-        deleteBtn.setAttribute("type", "button");
+
         bookInfo.appendChild(bookId);
         bookInfo.appendChild(bookTitle);
         bookInfo.appendChild(bookAuthor);
@@ -92,34 +89,10 @@ const getBooks = function () {
         bookInfo.appendChild(bookCondition);
         bookInfo.appendChild(bookCost);
         bookInfo.appendChild(bookQuantity);
-        bookInfo.appendChild(bookDeleteBtn);
+        bookInfo.appendChild(emptySpace);
         bookListing.appendChild(bookInfo);
-
-        someData = document.querySelectorAll(".delete-button");
-      });
-      someData.forEach((item) => {
-        item.addEventListener("click", function () {
-          let id = item.parentElement.parentElement.firstChild.innerHTML;
-          console.log(id);
-          deleteBooks(id);
-          // if (item.parentElement.parentElement === getId.
-        });
       });
     });
-};
-
-const deleteBooks = function (id) {
-  try {
-    fetch(`http://localhost:3000/books/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  } catch (e) {
-    console.log(e.message);
-  } finally {
-    window.location.href();
-  }
 };
 
 const bookSearchBtn = () => {
@@ -165,7 +138,7 @@ const getSearchBooks = function () {
         let bookCondition = document.createElement("span");
         let bookCost = document.createElement("span");
         let bookQuantity = document.createElement("span");
-        let bookDeleteBtn = document.createElement("span");
+        let emptySpace = document.createElement("span");
 
         // bookImg.innerHTML = data[0].img;
         bookTitle.innerHTML = item.title;
@@ -175,9 +148,8 @@ const getSearchBooks = function () {
         bookCondition.innerHTML = item.condition;
         bookCost.innerHTML = `$${item.cost}`;
         bookQuantity.innerHTML = item.quantity;
-        bookDeleteBtn.innerText = "X";
-
-        console.log(bookDeleteBtn);
+        emptySpace.innerText = "";
+        console.log(emptySpace);
 
         bookInfo.appendChild(bookImg);
         bookInfo.appendChild(bookTitle);
@@ -187,7 +159,7 @@ const getSearchBooks = function () {
         bookInfo.appendChild(bookCondition);
         bookInfo.appendChild(bookCost);
         bookInfo.appendChild(bookQuantity);
-        bookInfo.appendChild(bookDeleteBtn);
+        bookInfo.appendChild(emptySpace);
         bookListing.appendChild(bookInfo);
       });
     });

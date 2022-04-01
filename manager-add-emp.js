@@ -7,6 +7,46 @@ let lastName = document.getElementById("last-name");
 let storeNumber = document.getElementById("store-number");
 let isManagerRadio = document.getElementsByName("manager");
 let submitForm = document.getElementById("submit-employee");
+const currentUser = document.getElementById("current-username");
+const signout = document.getElementById("signout");
+const autoLogout = document.getElementById("auto-logout-time");
+const managerLink = document.getElementById("manager-link");
+
+let userString = localStorage.getItem("user");
+let userObject = JSON.parse(userString);
+
+currentUser.innerHTML = `${userObject.first_name}, you are logged in!`;
+
+if (userObject.isManager === false) managerLink.style.display = "none";
+
+signout.addEventListener("click", function () {
+  localStorage.clear();
+  window.location.href = "./index.html";
+});
+
+let timer = 60;
+
+let countdown = () => {
+  timer <= 15 && (autoLogout.innerHTML = `${timer} seconds remaining`);
+  timer === 1 && logout();
+  window.addEventListener("click", () => resetTimer());
+  window.addEventListener("mousemove", () => resetTimer());
+  window.addEventListener("mousedown", () => resetTimer());
+  window.addEventListener("scroll", () => resetTimer());
+  window.addEventListener("keypress", () => resetTimer());
+
+  timer--;
+};
+setInterval(countdown, 1000);
+
+function logout() {
+  window.location.href = "index.html"; //Adapt to actual logout script
+  localStorage.clear();
+}
+function resetTimer() {
+  timer = 60;
+  autoLogout.innerHTML = "";
+}
 
 submitForm.addEventListener("click", function (e) {
   e.preventDefault();
@@ -14,17 +54,6 @@ submitForm.addEventListener("click", function (e) {
   let selected = [...isManagerRadio].find((radio) => {
     return radio.checked;
   });
-
-  console.log(selected.value);
-  // const userData = {
-  //   firstName: firstName.value,
-  //   lastName: lastName.value,
-  //   username: `${username.value}`,
-  //   password: tempPassword.value,
-  //   email: email.value,
-  //   storeNumber: storeNumber.value,
-  //   isManager: Boolean(selected.value),
-  // };
 
   try {
     fetch(`http://localhost:3000/users`, {

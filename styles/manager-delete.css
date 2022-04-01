@@ -4,8 +4,28 @@
 }
 
 body {
-  background-color: whitesmoke;
   margin: 2% 5% 2% 5%;
+  background-image: url("/images/vintage-books.jpg");
+  color: white;
+}
+
+#title-row {
+  display: flex;
+  -ms-flex-align: center;
+}
+
+#current-username-container {
+  flex: 1;
+}
+
+#current-username {
+  padding-top: 50%;
+}
+
+#website-title {
+  /* float: right; */
+  font-size: 350%;
+  font-family: Brush Script MT;
 }
 
 /* NAVIGATION */
@@ -67,6 +87,8 @@ nav .nav__link {
 #book-search {
   border: none;
   text-decoration: none;
+  background-color: transparent;
+  color: white;
 }
 
 .book-filter-input,
@@ -77,7 +99,8 @@ nav .nav__link {
 
 #book-list-heading {
   background-color: rgba(255, 255, 255, 0);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
   position: static;
 }
 
@@ -106,16 +129,19 @@ nav .nav__link {
 
 .side__nav {
   background-color: rgb(209, 169, 117);
-  padding: 1% 1% 1% 1%;
+  padding: 0.5% 0.5% 0.5% 0.5%;
   margin: 0 3% 0 0;
   border-radius: 5px;
-  flex: 1;
+  max-height: fit-content;
+  /* flex: 1; */
+  height: 12%;
+  width: 12%;
 }
 
 .side__nav__item {
-  display: flex;
-  max-width: fit-content;
-  padding: 25% 25% 25% 25%;
+  /* display: flex; */
+  /* max-width: fit-content; */
+  padding: 16% 16% 16% 16%;
 }
 
 .submit-filter,

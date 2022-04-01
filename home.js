@@ -8,6 +8,9 @@ const filterBtn = document.querySelector(".submit-filter");
 const sortBtn = document.querySelector(".sort-button");
 const currentUser = document.getElementById("current-username");
 const signout = document.getElementById("signout");
+const autoLogout = document.getElementById("auto-logout-time");
+const managerLink = document.getElementById("manager-link");
+
 let someData;
 let getId;
 
@@ -16,10 +19,36 @@ let userObject = JSON.parse(userString);
 
 currentUser.innerHTML = `${userObject.first_name}, you are logged in!`;
 
+if (userObject.isManager === false) managerLink.style.display = "none";
+
 signout.addEventListener("click", function () {
   localStorage.clear();
   window.location.href = "./index.html";
 });
+
+let timer = 60;
+
+let countdown = () => {
+  timer <= 15 && (autoLogout.innerHTML = `${timer} seconds remaining`);
+  timer === 1 && logout();
+  window.addEventListener("click", () => resetTimer());
+  window.addEventListener("mousemove", () => resetTimer());
+  window.addEventListener("mousedown", () => resetTimer());
+  window.addEventListener("scroll", () => resetTimer());
+  window.addEventListener("keypress", () => resetTimer());
+
+  timer--;
+};
+setInterval(countdown, 1000);
+
+function logout() {
+  window.location.href = "index.html"; //Adapt to actual logout script
+  localStorage.clear();
+}
+function resetTimer() {
+  timer = 60;
+  autoLogout.innerHTML = "";
+}
 
 const renderForm = function (data, container) {
   // console.log(data[1].innerText);
@@ -93,7 +122,6 @@ const getBooks = function () {
   fetch(`http://localhost:3000/books`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       data.forEach((item) => {
         let bookInfo = document.createElement("book-row");
         bookInfo.setAttribute("class", "books");
@@ -154,6 +182,7 @@ const getBooks = function () {
 
   const updatingBook = (book) => {
     // console.log(book.children);
+    let theModal = document.getElementById("the-modal");
 
     let myModal = document.createElement("div");
     myModal.setAttribute("class", "modal");
@@ -167,7 +196,7 @@ const getBooks = function () {
     closeModal.innerHTML = "&times;";
     renderForm(book.children, myModal);
     myModal.appendChild(closeModal);
-    bookListing.appendChild(myModal);
+    theModal.appendChild(myModal);
 
     let updatedId = document.getElementById("id");
     let updatedTitle = document.getElementById("title");
