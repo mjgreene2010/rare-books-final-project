@@ -264,8 +264,9 @@ function submitUpdatedBook(updatedId, formData) {
       });
   } catch (error) {
     console.error("Error: error");
+  } finally {
+    location.href = "home.html";
   }
-  location.href = "home.html";
 }
 
 const bookSearchBtn = () => {
