@@ -144,10 +144,10 @@ const getBooks = function () {
         bookCondition.setAttribute("id", "book-condition");
         bookCost.setAttribute("id", "book-cost");
         bookQuantity.setAttribute("id", "book-quantity");
-        let updateBtn = document.createElement("button");
-        updateBtn.setAttribute("class", "update-button");
-        updateBtn.setAttribute("type", "button");
-        bookUpdateBtn.appendChild(updateBtn);
+        let updateOpenBtn = document.createElement("button");
+        updateOpenBtn.setAttribute("class", "update-open-button");
+        updateOpenBtn.setAttribute("type", "button");
+        bookUpdateBtn.appendChild(updateOpenBtn);
 
         bookId.innerHTML = item.id;
         bookTitle.innerHTML = item.title;
@@ -157,7 +157,7 @@ const getBooks = function () {
         bookCondition.innerHTML = item.condition;
         bookCost.innerHTML = `$${item.cost}`;
         bookQuantity.innerHTML = item.quantity;
-        updateBtn.innerHTML = "Update";
+        updateOpenBtn.innerHTML = "Update";
 
         bookInfo.appendChild(bookId);
         bookInfo.appendChild(bookTitle);
@@ -226,8 +226,7 @@ const getBooks = function () {
       }
     };
 
-    updateBtn.addEventListener("submit", (e) => {
-      e.preventDefault();
+    updateBtn.addEventListener("click", (e) => {
       const formData = {
         id: `${updatedId.value}`,
         title: `${updatedTitle.value}`,
