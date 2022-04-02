@@ -262,7 +262,7 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   }
-  setTimeout((location.href = "home.html"), 2000);
+  location.reload();
 }
 
 const bookSearchBtn = () => {
