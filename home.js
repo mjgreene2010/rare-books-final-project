@@ -226,7 +226,8 @@ const getBooks = function () {
       }
     };
 
-    updateBtn.addEventListener("click", (e) => {
+    updateBtn.addEventListener("submit", (e) => {
+      e.preventDefault();
       const formData = {
         id: `${updatedId.value}`,
         title: `${updatedTitle.value}`,
@@ -262,7 +263,6 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   }
-  location.reload = "home.html";
 }
 
 const bookSearchBtn = () => {
