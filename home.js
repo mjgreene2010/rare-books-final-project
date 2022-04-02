@@ -244,9 +244,6 @@ const getBooks = function () {
 };
 
 function submitUpdatedBook(updatedId, formData) {
-  console.log(updatedId);
-  console.log(formData);
-
   try {
     fetch(
       `https://rare-books-final-project-api.herokuapp.com/books/${updatedId.value}`,
@@ -265,8 +262,8 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   } finally {
-    setInterval((location.href = "home.html"), 2000);
   }
+  setInterval((location.href = "home.html"), 2000);
 }
 
 const bookSearchBtn = () => {
