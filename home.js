@@ -265,7 +265,7 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   } finally {
-    location.href = "home.html";
+    setInterval((location.href = "home.html"), 2000);
   }
 }
 
