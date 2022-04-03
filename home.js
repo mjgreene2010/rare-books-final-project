@@ -264,7 +264,6 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   }
-  location.reload();
 }
 
 const bookSearchBtn = () => {
