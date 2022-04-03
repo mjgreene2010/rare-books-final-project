@@ -62,8 +62,8 @@ submitForm.addEventListener("click", function (e) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        firstName: firstName.value,
-        lastName: lastName.value,
+        first_name: firstName.value,
+        last_name: lastName.value,
         username: username.value,
         password: tempPassword.value,
         email: email.value,
