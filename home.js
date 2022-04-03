@@ -241,7 +241,6 @@ const getBooks = function () {
         quantity: parseInt(`${updatedQuantity.value}`),
       };
       submitUpdatedBook(updatedId, formData);
-      window.location.reload();
     });
   };
 };
@@ -265,6 +264,7 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   }
+  window.location.href = "home.html";
 }
 
 const bookSearchBtn = () => {
