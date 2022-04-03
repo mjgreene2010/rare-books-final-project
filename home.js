@@ -137,7 +137,6 @@ const getBooks = function () {
         let bookQuantity = document.createElement("span");
         let bookUpdateBtn = document.createElement("span");
         bookId.setAttribute("id", "book-id");
-        bookId.setAttribute("style", "display: none");
         bookTitle.setAttribute("id", "book-title");
         bookAuthor.setAttribute("id", "book-author");
         bookYear.setAttribute("id", "book-year");
