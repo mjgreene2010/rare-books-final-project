@@ -181,7 +181,7 @@ const getBooks = function () {
     });
 
   const updatingBook = (book) => {
-    // console.log(book.children);
+    console.log(book.children);
     let theModal = document.getElementById("the-modal");
 
     let myModal = document.createElement("div");
