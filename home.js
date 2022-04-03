@@ -263,9 +263,8 @@ function submitUpdatedBook(updatedId, formData) {
       });
   } catch (error) {
     console.error("Error: error");
-  } finally {
-    getBooks();
   }
+  location.reload();
 }
 
 const bookSearchBtn = () => {
