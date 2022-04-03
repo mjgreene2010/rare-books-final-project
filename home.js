@@ -227,6 +227,7 @@ const getBooks = function () {
     };
 
     updateBtn.addEventListener("click", (e) => {
+      console.log("clicked");
       const formData = {
         id: `${updatedId.value}`,
         title: `${updatedTitle.value}`,

@@ -52,7 +52,7 @@ function resetTimer() {
 myForm.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log(e);
-  debugger;
+  // debugger;
   console.log(title);
   const formData = {
     title: `${title.value}`,

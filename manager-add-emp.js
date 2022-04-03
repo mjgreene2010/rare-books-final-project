@@ -79,7 +79,7 @@ submitForm.addEventListener("click", function (e) {
     console.error("Error: error");
   } finally {
     // console.log(isManager.value);
-    // window.location.href = "/home.html";
+    window.location.href = "home.html";
   }
 
   // console.log(userData);
