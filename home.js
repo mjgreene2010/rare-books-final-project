@@ -206,7 +206,7 @@ const getBooks = function () {
     let updatedCondition = document.getElementById("condition");
     let updatedCost = document.getElementById("cost");
     let updatedQuantity = document.getElementById("quantity");
-    let updateBtn = document.getElementById("update-button");
+    let updateBtn = document.getElementById("update-open-button");
 
     // // Get the modal
     var modal = document.getElementById("myModal");
