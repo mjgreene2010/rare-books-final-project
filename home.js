@@ -39,7 +39,7 @@ let countdown = () => {
 
   timer--;
 };
-setInterval(countdown, 1000);
+// setInterval(countdown, 1000);
 
 function logout() {
   window.location.href = "index.html"; //Adapt to actual logout script
@@ -209,10 +209,10 @@ const getBooks = function () {
     let updateBtn = document.getElementById("update-open-button");
 
     // // Get the modal
-    var modal = document.getElementById("myModal");
+    let modal = document.getElementById("myModal");
 
     // // Get the <span> element that closes the modal
-    var span = document.querySelector(".close");
+    let span = document.querySelector(".close");
 
     // // When the user clicks on <span> (x), close the modal
     span.addEventListener("click", function () {
@@ -221,11 +221,12 @@ const getBooks = function () {
 
     // // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target == modal) {
+      if (event.target == updateBtn) {
         modal.style.display = "none";
       }
     };
 
+    console.log(updateBtn);
     updateBtn.addEventListener("click", (e) => {
       console.log("clicked");
       const formData = {
