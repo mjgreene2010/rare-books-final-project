@@ -39,7 +39,7 @@ let countdown = () => {
 
   timer--;
 };
-// setInterval(countdown, 1000);
+setInterval(countdown, 1000);
 
 function logout() {
   window.location.href = "index.html"; //Adapt to actual logout script
