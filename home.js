@@ -170,7 +170,7 @@ const getBooks = function () {
         bookInfo.appendChild(bookUpdateBtn);
         bookListing.appendChild(bookInfo);
 
-        someData = document.querySelectorAll(".update-button");
+        someData = document.querySelectorAll(".update-open-button");
       });
       someData.forEach((item) => {
         let id = item.parentElement.parentElement.firstChild.innerHTML;
