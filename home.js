@@ -264,7 +264,7 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   }
-  window.location.href = "#";
+  window.location.href = "/home.html";
 }
 
 const bookSearchBtn = () => {
