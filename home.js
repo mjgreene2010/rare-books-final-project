@@ -111,7 +111,7 @@ const renderForm = function (data, container) {
       </span>
       </br></br>
       <span>
-        <label></label><button id="update-button" type="submit">Submit</button>
+        <label></label><button id="update-open-button" type="submit">Submit</button>
       </span>
     </form>
   </div>`;
