@@ -228,6 +228,7 @@ const getBooks = function () {
 
     console.log(updateBtn);
     updateBtn.addEventListener("click", (e) => {
+      e.preventDefault();
       console.log("clicked");
       const formData = {
         id: `${updatedId.value}`,
@@ -239,9 +240,9 @@ const getBooks = function () {
         cost: parseInt(`${updatedCost.value}`),
         quantity: parseInt(`${updatedQuantity.value}`),
       };
-      e.preventDefault();
       submitUpdatedBook(updatedId, formData);
     });
+    window.location.reload;
   };
 };
 
