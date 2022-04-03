@@ -264,6 +264,10 @@ function submitUpdatedBook(updatedId, formData) {
   } catch (error) {
     console.error("Error: error");
   }
+  reload();
+}
+
+function reload() {
   window.location.href = "home.html";
 }
 
