@@ -241,9 +241,9 @@ const getBooks = function () {
         quantity: parseInt(`${updatedQuantity.value}`),
       };
       submitUpdatedBook(updatedId, formData);
+      window.location.reload();
     });
   };
-  // window.location.reload();
 };
 
 function submitUpdatedBook(updatedId, formData) {
