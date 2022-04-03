@@ -243,7 +243,7 @@ const getBooks = function () {
       submitUpdatedBook(updatedId, formData);
     });
   };
-  window.location.reload();
+  // window.location.reload();
 };
 
 function submitUpdatedBook(updatedId, formData) {
