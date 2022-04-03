@@ -242,7 +242,6 @@ const getBooks = function () {
       e.preventDefault();
       submitUpdatedBook(updatedId, formData);
     });
-    window.location.reload();
   };
 };
 
@@ -264,6 +263,8 @@ function submitUpdatedBook(updatedId, formData) {
       });
   } catch (error) {
     console.error("Error: error");
+  } finally {
+    window.location.reload();
   }
 }
 
