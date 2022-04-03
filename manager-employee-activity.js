@@ -240,7 +240,7 @@ const sortBooks = (criteria) => {
         bookCondition.innerHTML = item.condition;
         bookCost.innerHTML = `$${item.cost}`;
         bookQuantity.innerHTML = item.quantity;
-        bookDeleteBtn.innerHTML = "X";
+        bookDeleteBtn.innerHTML = "";
         bookInfo.appendChild(bookImg);
         bookInfo.appendChild(bookTitle);
         bookInfo.appendChild(bookAuthor);
